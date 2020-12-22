@@ -21,13 +21,13 @@ def wishme():
     hour = int(datetime.datetime.now().hour)
 
     if hour >0 and hour < 12:
-        speak("good morning Faiz")
+        speak("good morning (UserName)")
     elif hour >=12 and hour < 18:
-        speak("good afternoon Faiz")
+        speak("good afternoon (UserName)")
     else:
-        speak("good evening Faiz")
+        speak("good evening (UserName)")
 
-    speak("Hai Faiz iam jarvis! how may i help you sir")
+    speak("Hai (UserName) iam jarvis! how may i help you sir")
 
 def takecammand():
     ''' it takes the input from user and returns string output'''
@@ -81,16 +81,16 @@ if __name__ == '__main__':
             startTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"Sir,the time is {startTime}")
         elif 'open code' in quary:
-            codePath = "C:\\Users\\ABDUL FAIZ\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = "Your Any Platform paths"
             os.startfile(codePath)
 
         elif 'send email' in quary:
             try:
                 speak("what should i say?")
                 content = takecammand()
-                to = 'n9164257182@gmail.com'
+                to = 'You E-mail account'
                 sendEmail(to,content)
-                speak("Emailhas been sent")
+                speak("Email has been sent")
             except Exception as e:
                 print(e)
                 speak("Sorry my friend .i am not able to sned")
